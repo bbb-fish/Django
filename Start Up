@@ -1,0 +1,75 @@
+
+OPEN LOCAL HOST
+
+	http://127.0.0.1:8000/
+
+
+INITIATE VIRTUAL ENVIRONMENT
+
+	virtualenv venv
+
+	source venv/bin/activate
+
+
+INSTALL DJANGO
+
+	pip install Django==1.9.6
+
+
+CHANGE DIRECTORY TO PROJECT
+
+	cd projects/myhellowebapp
+
+
+START GIT
+
+	git init
+
+
+REFRESH DATABASE
+
+	python manage.py migrate
+
+
+START UP SERVER
+
+	python manage.py runserver
+
+	[Ctrl + C] to shut it down
+
+
+CLOSE VIRTUAL ENVIRONMENT
+
+	deactivate
+
+
+
+bobby@bobby-Ubuntu:~$ virtualenv venv
+New python executable in /home/bobby/venv/bin/python
+Installing setuptools, pip, wheel...done.
+bobby@bobby-Ubuntu:~$ source venv/bin/activate
+(venv) bobby@bobby-Ubuntu:~$ pip install Django==1.9.6
+Requirement already satisfied: Django==1.9.6 in ./venv/lib/python2.7/site-packages
+(venv) bobby@bobby-Ubuntu:~$ cd projects/myhellowebapp
+(venv) bobby@bobby-Ubuntu:~/projects/myhellowebapp$ git init
+Reinitialized existing Git repository in /home/bobby/projects/myhellowebapp/.git/
+(venv) bobby@bobby-Ubuntu:~/projects/myhellowebapp$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, contenttypes, auth, sessions
+Running migrations:
+  No migrations to apply.
+(venv) bobby@bobby-Ubuntu:~/projects/myhellowebapp$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 16, 2017 - 22:00:44
+Django version 1.9.6, using settings 'hellowebapp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Not Found: /
+[16/Dec/2017 22:00:49] "GET / HTTP/1.1" 200 1767
+^C(venv) bobby@bobby-Ubuntu:~/projects/myhellowebapp$ 
+(venv) bobby@bobby-Ubuntu:~/projects/myhellowebapp$ deactivate
+bobby@bobby-Ubuntu:~/projects/myhellowebapp$ ^C
+bobby@bobby-Ubuntu:~/projects/myhellowebapp$
+
